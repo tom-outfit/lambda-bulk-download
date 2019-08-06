@@ -5,6 +5,12 @@ var https = require('https');
 var params, body = {};
 
 var AWS = require('aws-sdk');
+var credentials = new AWS.Credentials(
+    {accessKey='AKIAZHUTVSZQXWRX7DWM', 
+    secretAccessKey='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', 
+    sessionToken = null
+});
+AWS.config.credentials = credentials;
 var s3 = new AWS.S3();
 
 sexports.handler = (event, context, callback) => {
@@ -26,5 +32,4 @@ sexports.handler = (event, context, callback) => {
             callback(null, response);
         }
     });
-
 };  

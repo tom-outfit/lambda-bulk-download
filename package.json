@@ -9,7 +9,7 @@
     "lambda:build": "mkdir -p tmp; cp -r {*.js,package.json} tmp; cd tmp; rm -f ../bulkdownload.zip; zip -r --symlinks ../bulkdownload.zip *; cd ../; rm -rf tmp",
     "lambda:upload": "aws s3 cp bulkdownload.zip s3://generic-lambda-function",
     "lambda:update": "aws lambda update-function-code --function-name bulkdownload --s3-bucket generic-lambda-function --s3-key bulkdownload.zip",
-    "lambda:publish": "npm run lambda:build && npm run lambda:update && npm run test"
+    "lambda:publish": "npm run lambda:build && npm run lambda:upload && npm run lambda:update && npm run test"
   },
   "author": "Thomas Doyle",
   "license": "ISC",
