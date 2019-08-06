@@ -5,10 +5,8 @@ var https = require('https');
 var params, body = {};
 
 var AWS = require('aws-sdk');
-var credentials = new AWS.Credentials(
-    {accessKey='AKIAZHUTVSZQXWRX7DWM', 
-    secretAccessKey='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', 
-    sessionToken = null
+var credentials = new AWS.Credentials({
+
 });
 AWS.config.credentials = credentials;
 var s3 = new AWS.S3();
