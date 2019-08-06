@@ -30,7 +30,6 @@ exports.handler = (event, context, callback) => {
             let response = {
                 "statusCode": 200,
                 "headers": {
-                    "my_header": "my_value"
                 },
                 "body": JSON.stringify(data),
                 "isBase64Encoded": false
@@ -39,4 +38,4 @@ exports.handler = (event, context, callback) => {
         }
     });
 
-};
+};  
