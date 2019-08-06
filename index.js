@@ -5,10 +5,6 @@ var https = require('https');
 var params, body = {};
 
 var AWS = require('aws-sdk');
-var credentials = new AWS.Credentials({
-
-});
-AWS.config.credentials = credentials;
 var s3 = new AWS.S3();
 
 sexports.handler = (event, context, callback) => {
