@@ -1,24 +1,13 @@
-// var json = require('./media_library_item.json').data;
+/**
+ * 
+ */
 var https = require('https');
-var AWS = require('aws-sdk');
 var params, body = {};
 
-var credentials = new AWS.SharedIniFileCredentials({
-    profile: 'default',
-    filename: '/Users/thomasdoyle/.aws/credentials'
-});
-AWS.config.credentials = credentials;
-AWS.config.update({
-    region: 'ap-southeast-2'
-});
-
+var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
 
-params = {
-    Bucket: "bulk-journey-beyond"
-};
-
-exports.handler = (event, context, callback) => {
+sexports.handler = (event, context, callback) => {
     params = {
         Bucket: "bulk-journey-beyond"
     };
