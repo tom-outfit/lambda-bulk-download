@@ -1,6 +1,6 @@
 {
   "name": "bulk-download-assets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,9 @@
     "local": "node -e 'require(\"./index\").handler()'",
     "lambda:build": "mkdir -p tmp; cp -r {*.js,package.json,data} tmp; cd tmp; rm -f ../bulkdownload.zip; zip -r --symlinks ../bulkdownload.zip *; cd ../; rm -rf tmp",
     "lambda:update": "aws lambda update-function-code --function-name bulkdownload",
-    "publish": "npm run lambda:build && npm run lambda:update ",
+    "publish": "npm run lambda:build && npm run lambda:update "
   },
-  "author": "",
+  "author": "Thomas Doyle",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.504.0",
