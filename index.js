@@ -7,7 +7,7 @@ var params, body = {};
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
 
-sexports.handler = (event, context, callback) => {
+exports.handler = (event, context, callback) => {
     params = {
         Bucket: "bulk-journey-beyond"
     };
